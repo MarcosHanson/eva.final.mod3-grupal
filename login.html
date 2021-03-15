@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login de usuario</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <link rel="stylesheet" href="estilos.css">
+        <!--Script JQuery-->
+        <script src="jquery-3.6.0.js"></script>
+
+    
+
+    
+    
+    
+</head>
+    <body >
+               
+        <header class="cabecera">
+            <br>
+            <h1 class="titulo" id="mensaje1">Login de usuario</h1>
+            <br>
+        </header>
+        <br>
+        <nav class="navegacion">
+            <ul class="nav nav-pills">
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="index.html" style="background-color: rgb(57, 65, 65);">Inicio</a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Usuarios</a>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="login.html">Login</a></li>
+                    <li><a class="dropdown-item" href="crearusuario.html">Crear usuario</a></li>
+                  </ul>
+                </li>
+            
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Capacitaciones</a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="listarcapacitaciones.html">Lista de capacitaciones</a></li>
+                <li><a class="dropdown-item" href="crearcapacitacion.html">Crear capacitaciones</a></li>
+                <li><a class="dropdown-item" href="administrarasistentes.html">Administrar asistentes</a></li>
+            </ul>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Asesorias</a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="listadoasesorias.html">Lista de asesorias</a></li>
+                  <li><a class="dropdown-item" href="crearasesorias.html">Crear asesoria</a></li>
+                  <li><a class="dropdown-item" href="listadovisitas.html">Visitas</a></li>
+                  <li><a class="dropdown-item" href="listadoaccidentes.html">Lista de accidentes</a></li>
+              </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Pagos</a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="listadopago.html">Lista de pagos</a></li>
+                  <li><a class="dropdown-item" href="crearpago.html">Crear pago</a></li>
+                  
+              </ul>
+              </li>
+            <li class="nav-item">
+                  <a class="nav-link" href="reportes.html">Reportes</a>
+            </li>
+            <li class="nav-item">
+                    <a class="nav-link" href="contacto.html">Contacto</a>
+            </li>
+               
+            </ul>
+        </nav>
+           
+        
+        <br>
+        <main class="principal" >
+            <form id="login"  novalidate class="was-validated">
+                <br>
+                <ul>
+                <li>
+                    <div class="col-md-4">
+                    <label for="usuario">RUT del usuario: (ejemplo: 12345678-9)</label>
+                    <input class="form-control"  type="text" id="usuario" name="ingreso_usuario" placeholder="XXXXXXXX-Y" required>
+                    <div class="invalid-feedback">
+                        Debe ingresar el RUT.
+                      </div>
+                    </div>
+                </li>
+                <div style="color: crimson;">
+                    <p id="msgerror"  ></p>
+                </div>
+                <li>
+                    <label for="contras" class="form-label">Clave:</label>
+                    <input class="form-control"  style="width: 25%;"  type="password" id="contras" name="ingreso_contraseña"  maxlength="20" required> 
+                    <div class="invalid-feedback">
+                        Debe ingresar una contraseña.
+                      </div>
+                </li>
+                <br>
+                 </ul>
+                
+                
+                
+                
+                
+                <input type="button" id="botoning"style="margin-left: 200px;" value="ingresar" onclick=" ingreso()" >
+               
+             
+               
+            
+            
+            </form>
+            <br>
+            <div>
+                <p id="msgerror" style='margin-left: 15px;' ></p>
+            </div>
+            <br>
+            <br>
+          
+        </main>
+        
+        <br>
+        <footer class="pie">
+            <br>
+            ® Derechos reservados 2021
+            <br>
+        </footer>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script> 
+    </body>
+</html>
+<script>
+    var Frut = {
+        
+        validaRut : function (rutCompleto) {
+            rutCompleto = rutCompleto.replace("‐","-");
+            if (!/^[0-9]+[-|‐]{1}[0-9kK]{1}$/.test( rutCompleto ))
+            return false;
+            var tmp   = rutCompleto.split('-');
+            var digv  = tmp[1]; 
+            var rut   = tmp[0];
+            if ( digv == 'K' ) digv = 'k' ;
+            
+            return (Frut.dv(rut) == digv );
+        },
+        dv : function(T){
+            var M=0,S=1;
+            for(;T;T=Math.floor(T/10))
+            S=(S+T%10*(9-M++%6))%11;
+            return S?S-1:'k';
+        }
+        }
+
+ 
+    
+        $("#botoning").click(function(){
+            
+            if (Frut.validaRut( $("#usuario").val() ) ){
+                $("#msgerror").html("RUT correcto");
+                
+                var b = document.getElementById("contras").value;
+                  
+                if (b != ""){
+                
+                    location.href ="listadousuarios.html";
+                 }
+                    
+            } else {
+                $("#msgerror").html("Error: Formato incorrecto o RUT inválido");
+            
+            }
+
+                
+              
+        });
+        
+          
+                     
+           
+    </script>

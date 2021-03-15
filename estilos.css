@@ -1,0 +1,100 @@
+
+
+body{
+    box-shadow: 0px 0px 10px #000000;
+    border-style: groove;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    
+    background: url('https://www.itl.cat/pngfile/big/161-1619669_texture-texture-wallpaper-background-wallpaper-blue-imagen-para.jpg')
+        
+}
+.cabecera{
+    background-color: rgb(57, 65, 65);
+    border-radius: 10px;
+    color: beige;
+    font-size: 10px;
+    text-align: center;
+
+    box-shadow: 0px 0px 10px #ffffff;
+    
+  
+}
+.navegacion{
+    background-color: rgb(196, 255, 119);
+    border-radius: 10px;
+    color: rgb(57, 45, 216);
+    text-align:justify;
+    font-size: larger;
+    font-style: inherit;
+  
+    box-shadow: 0px 0px 10px #000000;
+}
+.principal{
+    background-color:rgb(56, 55, 97) ;
+    border-radius: 10px;
+    color: rgb(230, 230, 230);
+    text-align:justify;
+    font-size: larger;
+    font-style: inherit;
+   
+    box-shadow: 0px 0px 10px #000000;
+    
+
+}
+.pie{
+    background-color:rgb(83, 83, 83) ;
+    border-radius: 10px;
+    color: rgb(255, 255, 255);
+    text-align:justify;
+    font-size: larger;
+    font-style: inherit;
+    box-shadow: 0px 0px 10px #ffffff;
+}
+
+p{
+    margin-right: 65px;
+}
+
+td, th{
+    text-align: center;
+}
+
+.form{
+    padding-right: 100px;
+    display: flex;
+
+}
+
+
+
+@media screen and (min-width: 600px) {
+  
+body{
+    padding: 100px;
+    
+}
+h1{
+    font-size: 30px;
+}
+
+table{
+    width: 95%;
+    height: 95%;
+    font-size: 1.8vw;  
+}
+}
+
+@media screen and (min-width: 1200px){
+    body{
+        padding: 150px;
+    }
+    h1{
+        font-size: 50px;
+    }
+
+table{
+    width: 90%;
+    height: 90%;
+    font-size: 1.8vw; 
+}
+}

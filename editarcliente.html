@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar Cliente</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <link rel="stylesheet" href="estilos.css">
+    <!--Script JQuery-->
+    <script src="jquery-3.6.0.js"></script>
+      <!--Script JQuery Plugin Validacion-->
+	<script language="javascript" type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.10.0/jquery.validate.min.js"></script>
+    <script type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.10.0/localization/messages_es.js"></script>
+    <script>
+			jQuery(function() {
+                jQuery( "#editarcliente" ).validate();
+                    
+             });
+    </script>
+
+    <link rel="stylesheet" href="estilos.css">
+</head>
+
+<body >
+     
+        
+    <header class="cabecera">
+        
+        <br>
+        <h1>Formulario para editar cliente</h1>
+        <br>
+    </header>
+    <br>
+    <nav class="navegacion">
+        <ul class="nav nav-pills">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="index.html" style="background-color: rgb(57, 65, 65);">Inicio</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Usuarios</a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="login.html">Login</a></li>
+                <li><a class="dropdown-item" href="crearusuario.html">Crear usuario</a></li>
+              </ul>
+            </li>
+        
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Capacitaciones</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="listarcapacitaciones.html">Lista de capacitaciones</a></li>
+            <li><a class="dropdown-item" href="crearcapacitacion.html">Crear capacitaciones</a></li>
+            <li><a class="dropdown-item" href="administrarasistentes.html">Administrar asistentes</a></li>
+        </ul>
+        </li>
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Asesorias</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="listadoasesorias.html">Lista de asesorias</a></li>
+              <li><a class="dropdown-item" href="crearasesorias.html">Crear asesoria</a></li>
+              <li><a class="dropdown-item" href="listadovisitas.html">Visitas</a></li>
+              <li><a class="dropdown-item" href="listadoaccidentes.html">Lista de accidentes</a></li>
+          </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Pagos</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="listadopago.html">Lista de pagos</a></li>
+              <li><a class="dropdown-item" href="crearpago.html">Crear pago</a></li>
+              
+          </ul>
+          </li>
+        <li class="nav-item">
+              <a class="nav-link" href="reportes.html">Reportes</a>
+        </li>
+        <li class="nav-item">
+                <a class="nav-link" href="contacto.html">Contacto</a>
+        </li>
+           
+        </ul>
+    </nav>
+    <br>
+    <main class="principal">
+        <br>
+        <form id="editarcliente">
+            <ul>
+            <li>
+                <label for="runclie">Run cliente a editar:</label>
+                <input  type="text" id="runclie" name="run_cliente" class="required" minlength="8" min="1111111" max="99999999">
+            </li>
+            <br>
+            <li>
+                <label for="nombApelli">Nombres y Apellidos:</label>
+                <input type="text"  id="nombApelli" name="nombres_apellidos" class="required" minlength="5">
+            </li>
+            <br>
+            <li>
+                <label for="telefono">Telefono:</label>
+                <input type="number"  id="telefono" name="ingreso_telefono" class="required" minlength="9">
+            </li>
+            <br>
+            <li>
+                <label for="afp">Afp:</label>
+                <input type="text" id="afp" name="ingreso_afp" class="required" minlength="4">
+            </li>
+            <br>
+            <li>
+                <label for="sistsalud">Sistema de salud:</label>
+                <input  type="text" id="sistsalud" name="ingreso_salud" class="required" minlength="6">
+            </li>
+            <br>
+            <li>
+                <label for="direccion">Dirección:</label>
+                <input  type="text" id="direccion" name="ingreso_direccion" class="required" minlength="4">
+            </li>
+            <br>
+            <li>
+                <label for="comuna">Comuna:</label>
+                <input type="text" id="comuna" name="ingreso_comuna" class="required" minlength="4">
+            </li>
+            <br>
+            <li>
+                <label for="edad">Edad:</label>
+                <input  type="number" id="edad" name="ingreso_edad" class="required" minlength="1" min="1" max="99">
+            </li>
+            </ul>
+            
+                <button style='margin-left: 240px;' type="submit">Modificar datos</button>
+                <br>
+                <br>
+                <br>
+         </form>
+         
+      
+    </main>
+    <br>
+    
+    <footer class="pie">
+® Derechos reservados 2021
+    </footer>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script> 
+            
+</body>
+</html>

@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administrar Asistentes</title>
+
+    <link rel="stylesheet" href="estilos.css"> 
+    <!--Hoja de estilo Datatable-->
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.24/css/dataTables.bootstrap4.min.css">
+    <!--Hoja de estilo Bootstrap-->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.css" rel="stylesheet" >
+	<script language="javascript" type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.10.0/jquery.validate.min.js"></script>
+    <script type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.10.0/localization/messages_es.js"></script>
+   
+    <!--Script JQuery-->
+    <script src="jquery-3.6.0.js"></script>
+    <!--Script Datatable-->
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.min.js"></script>
+
+
+
+    
+    <script type="text/javascript" charset="utf8" >
+        
+        $(document).ready( function () {
+         $('#tabla1').DataTable();
+           } );
+   
+
+           jQuery(function() {
+                jQuery( "#formulario" ).validate();
+               
+             });   
+             
+             
+         </script> 
+</head>
+
+<body >
+
+    <header class="cabecera">
+        <br>
+        <h1>Administrar Asistentes</h1>
+        <br>
+    </header>
+    <br>
+     <nav class="navegacion">
+            <ul class="nav nav-pills">
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="index.html" style="background-color: rgb(57, 65, 65);">Inicio</a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Usuarios</a>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="login.html">Login</a></li>
+                    <li><a class="dropdown-item" href="crearusuario.html">Crear usuario</a></li>
+                  </ul>
+                </li>
+            
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Capacitaciones</a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="listarcapacitaciones.html">Lista de capacitaciones</a></li>
+                <li><a class="dropdown-item" href="crearcapacitacion.html">Crear capacitaciones</a></li>
+                <li><a class="dropdown-item" href="administrarasistentes.html">Administrar asistentes</a></li>
+            </ul>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Asesorias</a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="listadoasesorias.html">Lista de asesorias</a></li>
+                  <li><a class="dropdown-item" href="crearasesorias.html">Crear asesoria</a></li>
+                  <li><a class="dropdown-item" href="listadovisitas.html">Visitas</a></li>
+                  <li><a class="dropdown-item" href="listadoaccidentes.html">Lista de accidentes</a></li>
+              </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Pagos</a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="listadopago.html">Lista de pagos</a></li>
+                  <li><a class="dropdown-item" href="crearpago.html">Crear pago</a></li>
+                  
+              </ul>
+              </li>
+            <li class="nav-item">
+                  <a class="nav-link" href="reportes.html">Reportes</a>
+            </li>
+            <li class="nav-item">
+                    <a class="nav-link" href="contacto.html">Contacto</a>
+            </li>
+               
+            </ul>
+        </nav>
+    <br>
+    <br>
+    <main class="principal">
+        
+        <p><h1 style="text-align: center;">Listado de asistentes</h1></p>
+        
+        <table style="margin: auto;" border="1" id="tabla1" data-toggle="table" >
+            
+            <thead align="center"> 
+            <tr>
+
+                <th >Identificador</th> 
+                <th >Correo</th>
+                <th >Teléfono</th>
+				<th >Eliminar</th>
+
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+
+                <td>01</td>
+                <td>mario.s@gmail.com</td>
+                <td>+56954324567</td>
+                <td><a title="eliminar asistente" href="#"><img
+                            src="https://cdn4.iconfinder.com/data/icons/pretty_office_3/256/Remove-Male-User.png"
+                            alt="eliminar usuario" width="24" height="24" /></a></td>
+							
+            </tr>
+
+            <tr>
+
+                <td>02</td>
+                <td>mir.l@hotmail.com</td>
+                <td>+56998765432</td>
+                <td><a title="eliminar asistente" href="#"><img
+                            src="https://cdn4.iconfinder.com/data/icons/pretty_office_3/256/Remove-Male-User.png"
+                            alt="eliminar usuario" width="24" height="24" /></a></td>
+            </tr>
+
+            <tr>
+                <td>03</td>
+                <td>mac.b@gmail.com</td>
+                <td>+56988899933</td>
+                <td><a title="eliminar asistente" href="#"><img
+                                src="https://cdn4.iconfinder.com/data/icons/pretty_office_3/256/Remove-Male-User.png"
+                                alt="eliminar usuario" width="24" height="24" /></a></td>
+            </tr>
+
+            <tr>
+                <td>04</td>
+                <td>familiamiranda@gmail.com</td>
+                <td>+56912123432</td>
+                <td><a title="eliminar usuario" href="#"><img
+                                src="https://cdn4.iconfinder.com/data/icons/pretty_office_3/256/Remove-Male-User.png"
+                                alt="eliminar usuario" width="24" height="24" /></a></td>
+            </tr>
+
+            <tr>
+                <td>05</td>
+                <td>casi.casi@gmail.com</td>
+                <td>+56983912039</td>
+                <td><a title="eliminar usuario" href="#"><img
+                                src="https://cdn4.iconfinder.com/data/icons/pretty_office_3/256/Remove-Male-User.png"
+                                alt="eliminar usuario" width="24" height="24" /></a></td>
+            </tr>
+
+            <tr>
+                <td>06</td>
+                <td>losquefueron@gmail.com</td>
+                <td>+56993819203</td>
+                <td><a title="eliminar usuario" href="#"><img
+                                src="https://cdn4.iconfinder.com/data/icons/pretty_office_3/256/Remove-Male-User.png"
+                                alt="eliminar usuario" width="24" height="24" /></a></td>
+            </tr>
+
+            <tr>
+                <td>07</td>
+                <td>aweka02@gmail.com</td>
+                <td>+56998574930</td>
+                <td><a title="eliminar usuario" href="#"><img
+                                src="https://cdn4.iconfinder.com/data/icons/pretty_office_3/256/Remove-Male-User.png"
+                                alt="eliminar usuario" width="24" height="24" /></a></td>
+            </tr>
+
+            <tr>
+                <td>08</td>
+                <td>calma@gmail.com</td>
+                <td>+56920394857</td>
+                <td><a title="eliminar usuario" href="#"><img
+                                src="https://cdn4.iconfinder.com/data/icons/pretty_office_3/256/Remove-Male-User.png"
+                                alt="eliminar usuario" width="24" height="24" /></a></td>
+            </tr>
+
+            <tr>
+                <td>09</td>
+                <td>estoyenjupiter@gmail.com</td>
+                <td>+56956456788</td>
+                <td><a title="eliminar usuario" href="#"><img
+                                src="https://cdn4.iconfinder.com/data/icons/pretty_office_3/256/Remove-Male-User.png"
+                                alt="eliminar usuario" width="24" height="24" /></a></td>
+            </tr>
+
+            <tr>
+                <td>10</td>
+                <td>formulario@gmail.com</td>
+                <td>+56923452345</td>
+                <td><a title="eliminar usuario" href="#"><img
+                                src="https://cdn4.iconfinder.com/data/icons/pretty_office_3/256/Remove-Male-User.png"
+                                alt="eliminar usuario" width="24" height="24" /></a></td>
+            </tr>
+            </tbody>
+        </table>
+        <form id="formulario" action="/action_page.php">
+            <br>
+            <h3>Agregar nuevo asistente</h3>
+            <ul>
+                <li>
+                    <label for="idasis">Identificador asistente:</label>
+                    <input type="number" id="idasis" name="ingreso_identificador" min=1 max=9999 required>
+                </li>
+                <br>
+                <li>
+                    <label for="nombrecompleto">Nombre completo:</label>
+                    <input  style='margin-left: 30px;'  type="text" id="apellido" name="ingreso_nombrecompleto" minlength=1 maxlength=99  required>
+                </li>
+                <br>
+                <li>
+                    <label for="edad">Edad:</label>
+                    <input  style='margin-left: 140px;' type="number" id="edad" name="ingreso_edad" min=1 max=149 required>
+                </li>
+                <br>
+                <li>
+                    <label for="correo">Correo electrónico:</label>
+                    <input  style='margin-left: 25px;' type="email" id="correo" name="ingreso_correo" required>
+                </li>
+                <br>
+                <li>
+                    <label for="telefono">Telefono:</label>
+                    <input  style='margin-left: 108px;' type="tel" id="telefono" name="phone" placeholder="+569XXXXXXXX" pattern="[+]{1}[5]{1}[6]{1}[9]{1}[0-9]{8}" required><br>
+                    <small>Formato: +569XXXXXXXX"</small><br>
+                </li>
+				<br>
+                <li>
+                    <label for="campos">Selección de capacitación</label>
+                    <select class="form" name="seleccion" id="seleccion">
+                        <option value=""></option>
+                        <option value="opcion1">10-11-2021 / 18:00 hrs / Peter Rock</option>
+                        <option value="opcion2">12-012-2021 / 21:00 hrs / Elsa Pallo</option>
+                        <option value="opcion3">09-09-2022 / 17:00 hrs / Aquiles Castro</option>
+                        <option value="opcion4">04-04-2021 / 18:00 hrs / Elba Zurita</option>
+                    </select>
+                </li>
+            </ul>
+            
+            <br>
+            <button type="submit" style="margin-left: 400px;" class="btn btn-secondary">Agregar</button>
+
+        </form>
+
+        <br>
+        <br>
+
+    </main>
+    <br>
+
+    <footer class="pie">
+        
+        ® Derechos reservados 2021
+        <br>
+    </footer>
+    <!--Script Bootstrap-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script> 
+       
+</body>
+
+</html>
